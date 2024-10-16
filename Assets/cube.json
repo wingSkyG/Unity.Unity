@@ -1,0 +1,102 @@
+{
+	"cube" : {
+		"__type" : "GameObject",
+		"value" : {
+			"_ES3Ref" : "8695305547376923973",
+			"transformID" : 3200288923901695232,
+			"layer" : 0,
+			"tag" : "Untagged",
+			"name" : "Cube",
+			"hideFlags" : 0,
+			"active" : true,
+			"children" : [
+				
+			],
+			"components" : [
+				{
+					"__type" : "Transform",
+					"_ES3Ref" : "3200288923901695232",
+					"goID" : "8695305547376923973",
+					"parent" : null,
+					"localPosition" : {
+						"x" : 2.5960803,
+						"y" : 0.495943785,
+						"z" : 2.42254925
+					},
+					"localRotation" : {
+						"x" : 0,
+						"y" : 0,
+						"z" : 0,
+						"w" : 1
+					},
+					"localScale" : {
+						"x" : 1,
+						"y" : 1,
+						"z" : 1
+					},
+					"siblingIndex" : 2
+				},{
+					"__type" : "MeshFilter",
+					"_ES3Ref" : "554027232498994430",
+					"goID" : "8695305547376923973",
+					"sharedMesh" : {
+						"_ES3Ref" : "5432405227023645349"
+					}
+				},{
+					"__type" : "UnityEngine.MeshRenderer,UnityEngine.CoreModule",
+					"_ES3Ref" : "479190270210125113",
+					"goID" : "8695305547376923973",
+					"additionalVertexStreams" : null,
+					"enabled" : true,
+					"shadowCastingMode" : 1,
+					"receiveShadows" : true,
+					"sharedMaterials" : [
+						{
+							"_ES3Ref" : "6930362698326002439"
+						}
+					],
+					"lightmapIndex" : -1,
+					"realtimeLightmapIndex" : -1,
+					"lightmapScaleOffset" : {
+						"x" : 1,
+						"y" : 1,
+						"z" : 0,
+						"w" : 0
+					},
+					"motionVectorGenerationMode" : 1,
+					"realtimeLightmapScaleOffset" : {
+						"x" : 1,
+						"y" : 1,
+						"z" : 0,
+						"w" : 0
+					},
+					"lightProbeUsage" : 1,
+					"lightProbeProxyVolumeOverride" : null,
+					"probeAnchor" : null,
+					"reflectionProbeUsage" : 1,
+					"sortingLayerName" : "Default",
+					"sortingLayerID" : 0,
+					"sortingOrder" : 0
+				},{
+					"__type" : "UnityEngine.BoxCollider,UnityEngine.PhysicsModule",
+					"_ES3Ref" : "742062378044935942",
+					"goID" : "8695305547376923973",
+					"center" : {
+						"x" : 0,
+						"y" : 0,
+						"z" : 0
+					},
+					"size" : {
+						"x" : 1,
+						"y" : 1,
+						"z" : 1
+					},
+					"enabled" : true,
+					"isTrigger" : false,
+					"contactOffset" : 0.01,
+					"material" : null
+				}
+			]
+		}
+	}
+}
