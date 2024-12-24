@@ -1,0 +1,10 @@
+{
+	"int10" : {
+		"__type" : "int",
+		"value" : 10
+	},
+	"int1" : {
+		"__type" : "int",
+		"value" : 1
+	}
+}

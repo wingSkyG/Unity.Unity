@@ -1,0 +1,9 @@
+{
+	"ClassToSaved_Object" : {
+		"__type" : "ClassToSaved,Assembly-CSharp",
+		"value" : {
+			"S" : "123",
+			"_num" : 1
+		}
+	}
+}

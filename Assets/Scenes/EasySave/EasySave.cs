@@ -7,37 +7,40 @@ using UnityEngine;
 public class EasySave : MonoBehaviour
 {
     public GameObject cube;
+    [ES3Serializable] public GameObject sphere;
+    
+    private string _filePath;
+    private string _fileName;
+    private ES3Settings _settings;
+    // private ClassToSaved _classToSaved = new ClassToSaved();
 
     private void Awake()
     {
         Debug.Log($"Application.dataPath:{Application.dataPath}"); 
-        Debug.Log($"Application.persistentDataPath:{Application.persistentDataPath}"); 
+        Debug.Log($"Application.persistentDataPath:{Application.persistentDataPath}");
+
+        _filePath = Application.dataPath + "/Scenes/EasySave/";
     }
 
     // Start is called before the first frame update
     void Start()
     {
-        // ES3.Save("cube", cube);
-        
-        // ES3.Save<GameObject>("cube", cube, Application.dataPath+"/Resources/myFile.bytes");
-        // AssetDatabase.Refresh();
-        
-        // ES3.Save<GameObject>("cube", cube, Application.dataPath + "/cube.json");
-        
-        // ES3.Save<int>("int1", 1, Application.dataPath+"/Resources/EasySave/int.json");
-        // ES3.Save<int>("int2", 2, Application.dataPath+"/Resources/EasySave/int.json");
-        // ES3.Save<int>("int3", 3, Application.dataPath+"/Resources/EasySave/int.json");
-        // var intVal = ES3.Load<int>("int3", Application.dataPath + "/Resources/EasySave/int.json");
-        // Debug.Log(intVal);
-        
-        ES3.Save("cacheData", 123,  new ES3Settings(ES3.Location.Cache));
-        var cacheData = ES3.Load<int>("cacheData", new ES3Settings(ES3.Location.Cache));
-        Debug.Log(cacheData);
-    }
+        _fileName = "int_json.json";
+        _settings = new ES3Settings(_filePath + _fileName);
+        ES3.Save("int1", 1, _settings);
+        ES3.Save("int10", 10, _settings);
 
-    // Update is called once per frame
-    void Update()
-    {
+        _fileName = "gameobject.json";
+        _settings = new ES3Settings(_filePath + _fileName);
+        ES3.Save("cube", cube, _settings);
+
+        _fileName = "class.json";
+        _settings = new ES3Settings(_filePath + _fileName);
+        ES3.Save("ClassToSaved", typeof(ClassToSaved), _settings);
         
+        _fileName = "class_object.json";
+        _settings = new ES3Settings(_filePath + _fileName);
+        var classToSaved = new ClassToSaved();
+        ES3.Save("ClassToSaved_Object", classToSaved, _settings);
     }
 }
