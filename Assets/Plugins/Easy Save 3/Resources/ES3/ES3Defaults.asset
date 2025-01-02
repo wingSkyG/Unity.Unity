@@ -37,6 +37,7 @@ MonoBehaviour:
     - EasySave3
     - FancyScrollView
     - Luban.Runtime
+    - Tests
     showAdvancedSettings: 1
   addMgrToSceneAutomatically: 0
   autoUpdateReferences: 1
