@@ -36,8 +36,12 @@ MonoBehaviour:
     - DOTweenPro.Scripts
     - EasySave3
     - FancyScrollView
+    - InputSystem.Samples.Visualizers
     - Luban.Runtime
     - Tests
+    - Unity.InputSystem.InGameHints
+    - Unity.InputSystem.Recorder
+    - UnityEngine.InputSystem.Samples.UIvsGameInput
     showAdvancedSettings: 1
   addMgrToSceneAutomatically: 0
   autoUpdateReferences: 1
