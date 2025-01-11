@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace Scenes.FancyScrollView
 {
-    public class ItemData : MonoBehaviour
+    public class ItemData
     {
         public string Message { get; }
 

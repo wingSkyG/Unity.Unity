@@ -1,20 +1,21 @@
+using System;
 using System.Linq;
-using Unity.VisualScripting;
+using Scenes.FancyScrollView;
 using UnityEngine;
 
-namespace Scenes.FancyScrollView
+namespace Scenes.Plugin.FancyScrollView
 {
     public class EntryPoint : MonoBehaviour
     {
-        [SerializeField] private MyScrollView myScrollView = default;
+        [SerializeField] private MyScrollViewCtrl _myScrollViewCtrl = default;
         
-        void Start()
+        private void Start()
         {
             var items = Enumerable.Range(0, 20)
                 .Select(i => new ItemData($"Cell {i}"))
                 .ToArray();
             
-            myScrollView.UpdateData(items);
+            _myScrollViewCtrl.UpdateData(items);
         }
     }
 }
